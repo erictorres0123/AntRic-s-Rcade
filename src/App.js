@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import { CreateBoard, } from './components/CreateBoard';
+import { CreateTimer } from './components/CreateTimer';
 
 
 
@@ -20,12 +21,14 @@ const [gameState, setGameState] = useState({
 
 // dom selector for board in html
 const boardElement = document.querySelector('#board');
+const timerElement = document.querySelector('#timer')
 
-return ( <div> < CreateBoard 
-  gameState = {gameState} 
-  boardElement = {boardElement} 
-  /> 
-  </div>)
+return ( 
+  <div> 
+    < CreateTimer gameState = {gameState} timerElement = {timerElement} />
+    < CreateBoard gameState = {gameState}  boardElement = {boardElement} /> 
+  </div>
+  )
 };
 
 
