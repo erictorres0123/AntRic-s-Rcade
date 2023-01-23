@@ -1,5 +1,8 @@
 import React from "react";
 
 export const CreateTimer = (gameState, timerElement) => {
-timerElement.innerHTML = ('test')
+    let game = {
+        playing: true,
+        time: 0
+    } 
 };
