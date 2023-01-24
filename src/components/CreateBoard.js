@@ -2,9 +2,9 @@ import React from "react";
 
 
 export const CreateBoard = ({gameState, boardElement}) => {
-boardElement.innerHTML = ('beans and caca')
+boardElement.innerHTML = ('board')
 for (let i = 0; i < gameState.board.length; i++) {
-    console.log('beans');
+    console.log('boardcells');
 }
 
 };

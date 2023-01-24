@@ -11,6 +11,7 @@ function App () {
 
   
 const [gameState, setGameState] = useState({
+  playing: false,
   players: ["x" , "o"], 
   board: [
     [null], [null], [null],
@@ -21,12 +22,13 @@ const [gameState, setGameState] = useState({
 
 // dom selector for board in html
 const boardElement = document.querySelector('#board');
-const timerElement = document.querySelector('#timer')
+const timerElement = document.querySelector('#timer');
 
 return ( 
   <div> 
     < CreateTimer gameState = {gameState} timerElement = {timerElement} />
     < CreateBoard gameState = {gameState}  boardElement = {boardElement} /> 
+
   </div>
   )
 };
