@@ -2,13 +2,14 @@
 import React from "react"
 
 
-export const CreateTimer = (gameState) => {
+export const CreateTimer = () => {
     
     let time = 0;
-    const counter = (gameState) => {
+
+    setInterval(() => {
         time++;
         console.log(time);
-    }
+      }, 1000);
 
     return (
         <div>
@@ -16,7 +17,7 @@ export const CreateTimer = (gameState) => {
             {time}    
             </div>  
             
-            <button type="button" onClick= {counter}> Start Game </button>
+            <button type="button" onClick= {setInterval}> Start Game </button>
         </div>
         
     )
