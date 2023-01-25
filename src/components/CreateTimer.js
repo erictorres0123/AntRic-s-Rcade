@@ -1,28 +1,27 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import React from "react"
 
 
-export const CreateTimer = () => {
-    const [time, setTime] = useState(0)  
-
-    const timer = (e) = {
-        e.preventDefault();
-    const counter = () => {
+export const CreateTimer = (gameState) => {
+    
+    let time = 0;
+    const counter = (gameState) => {
         time++;
-    } 
-    setInterval(counter, 1000);
-};
+        console.log(time);
+    }
+
     return (
         <div>
             <div>
             {time}    
-            </div> 
+            </div>  
             
-            <button type="button" onClick= {timer}> Start Game </button>
+            <button type="button" onClick= {counter}> Start Game </button>
         </div>
         
     )
-
-};
+    
+}
 
 
 
